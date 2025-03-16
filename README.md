@@ -49,22 +49,46 @@ Six supervised learning models were implemented: Logistic Regression, Gaussian N
 
 #### Model Performance Before Fine-Tuning
 ![ROC Curve - All Models](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/5c01bd2203d5d219b4743ca332d8fe3f98abfac7/Visualisations/ROC%20Curve%20(All%20Models).png)
+
 Before hyperparameter tuning, all models were trained and evaluated using accuracy, precision, recall, F1-score, and ROC AUC. The goal was to identify which models performed well in classifying stroke cases while minimising false negatives.
 
 - **K-Nearest Neighbours (KNN)** achieved an accuracy of 93.08%, but recall was 91%, indicating that some stroke cases were missed. The precision of 92% suggests balanced classification, but further improvements were needed.
+
+![KNN - Before Fine-Tuning](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/main/Visualisations/KNN%20(Before%20Fine%20Tuning).png)
+
 - **Logistic Regression** performed consistently across both training and test data, achieving an accuracy of 90.53%, with a precision of 90%, recall of 89%, and F1-score of 89.5%.
+
+![Logistic Regression - Before Fine-Tuning](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/main/Visualisations/Logistics%20Regression%20(Before%20Fine%20Tuning).png)
+
 - **Decision Tree** was highly overfitted, with a training accuracy of 100% but a test accuracy of 93.22%. The high recall of 95% was promising, but a lower precision of 90% indicated some false positives.
+
+![Decision Tree - Before Fine-Tuning](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/main/Visualisations/Decision%20Tree%20(Before%20Fine%20Tuning).png)
+
 - **Gaussian Naïve Bayes** underperformed, with an accuracy of 66.67%, precision of 72%, recall of 64%, and a low ROC AUC, making it unreliable for stroke prediction.
+
+![Gaussian Naïve Bayes - Before Fine-Tuning](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/main/Visualisations/Gaussian%20NB%20(Before%20Fine%20Tuning).png)
+
 - **Support Vector Machine (SVM)** performed well, achieving an accuracy of 94.43%, with a precision of 95%, recall of 93%, and F1-score of 94%, demonstrating strong classification performance.
+
+![Support Vector Machine - Before Fine-Tuning](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/main/Visualisations/SVM%20(Before%20Fine%20Tuning).png)
+
 - **Random Forest (Before Tuning)** outperformed all models, achieving an accuracy of 96.67%, an F1-score of 97%, recall of 96%, and an ROC AUC of 0.99, confirming its robustness.
+  
+![Random Forest - Before Fine-Tuning](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/main/Visualisations/RF%20(Before%20Fine%20Tuning).png)
 
 #### Model Performance After Fine-Tuning
+
 ![ROC Curve - RF After Fine-Tuning](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/5c01bd2203d5d219b4743ca332d8fe3f98abfac7/Visualisations/ROC%20(RF%20After%20Fine%20Tuning).png)
 
 After fine-tuning hyperparameters with RandomizedSearchCV, model performance significantly improved, particularly for the top two models: SVM and Random Forest.
 
 - **SVM (After Tuning)** improved recall to 94%, ensuring that more stroke cases were correctly classified. The overall accuracy increased to 95%, with a precision of 96% and an F1-score of 95%, leading to fewer false negatives. The training score for SVM improved to 98.94%, while the test score reached 95.21%, demonstrating better generalisation.
+
+![SVM Classification Report](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/main/Visualisations/SVM%20(After%20Fine%20Tuning).png)
+
 - **Random Forest (After Tuning)** remained the top-performing model, improving recall to 97%, maintaining an accuracy of 97%, and achieving an F1-score of 97%. The ROC AUC remained at 0.99, confirming its superior predictive performance.
+
+![Random Forest Classification Report](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/main/Visualisations/RF%20(After%20Fine%20Tuning).png)
 
 The reduction in false negatives through fine-tuning is crucial in medical applications, as it ensures that high-risk individuals are accurately identified for preventive intervention.
 
