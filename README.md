@@ -48,7 +48,7 @@ Six supervised learning models were implemented: Logistic Regression, Gaussian N
 ### Evaluation
 
 #### Model Performance Before Fine-Tuning
-![ROC Curve - All Models](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/5c01bd2203d5d219b4743ca332d8fe3f98abfac7/Visualisations/ROC%20Curve%20(All%20Models).png)
+![ROC Curve - All Models](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/main/Visualisations/ROC%20Curve%20(All%20Models).png)
 
 Before hyperparameter tuning, all models were trained and evaluated using accuracy, precision, recall, F1-score, and ROC AUC. The goal was to identify which models performed well in classifying stroke cases while minimising false negatives.
 
@@ -78,7 +78,7 @@ Before hyperparameter tuning, all models were trained and evaluated using accura
 
 #### Model Performance After Fine-Tuning
 
-![ROC Curve - RF After Fine-Tuning](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/5c01bd2203d5d219b4743ca332d8fe3f98abfac7/Visualisations/ROC%20(RF%20After%20Fine%20Tuning).png)
+![ROC Curve - RF After Fine-Tuning](https://github.com/DipunMohapatra/Benchmarking-Different-Supervised-ML-Models-for-Stroke-Prediction/blob/main/Visualisations/ROC%20(RF%20After%20Fine%20Tuning).png)
 
 After fine-tuning hyperparameters with RandomizedSearchCV, model performance significantly improved, particularly for the top two models: SVM and Random Forest.
 
